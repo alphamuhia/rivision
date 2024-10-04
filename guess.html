@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard Guessing Game</title>
+    <link rel="stylesheet" href="guess.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="flashcard" id="flashcard" onclick="flipCard()">
+            <div class="front" id="front">
+                <p>Guess the image!</p>
+            </div>
+            <div class="back" id="back">
+                <img id="hiddenImage" src="" alt="Image to Guess">
+            </div>
+        </div>
+        <div class="choices">
+            <button class="choice" id="Horse" onclick="checkAnswer(1)">Horse </button>
+            <button class="choice" id="Falcon" onclick="checkAnswer(2)">Falcon </button>
+            <button class="choice" id="Killer-Whale" onclick="checkAnswer(3)">Killer Whale </button>
+        </div>
+        <div class="scoreboard">
+            <p>Score: <span id="score">0</span></p>
+            <p>Plays: <span id="plays">0</span> / 3</p>
+        </div>
+        <button id="reset" onclick="resetGame()">Reset Game</button>
+    </div>
+
+    <script src="guess.js"></script>
+</body>
+</html>
